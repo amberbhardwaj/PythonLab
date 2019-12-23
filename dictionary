@@ -1,0 +1,132 @@
+#Data Structure OR Sequences
+
+#List
+#tuple
+#dict
+#set
+#strings
+
+######################################################################
+#Lists
+nums=[11,22,33]
+nums = 3
+
+#slicing
+details = ['yash',34, 'India', 6.0, False, "1234"]
+details[2:4]
+#List supports Mutablity
+details[1] = 35
+details[1:4]
+# [35, 'India', 6.0]
+
+details
+#['yash', 35, 'India', 6.0, False, '1234']
+
+number = [11,22,33]
+number.append(44)
+number
+n = ['line', 1, 'pp', 2]
+number.append(n)
+number
+ex=[1,2,3]
+number.extend(ex)
+number
+#[11, 22, 33, 44, ['line', 1, 'pp', 2], 1, 2, 3]
+
+number.append(11)
+number.sort(reverse=True)
+number
+#[44, 33, 22, 11, 11, 11, 11, 11, 11, 11, 11, 11, 3, 2, 1]
+
+number.count(11) #Count the number of X in a list.
+
+details1 = details1*3 #It appends the same array N times at the end.
+
+dir(details1) #It displays the list of supported member functions.
+
+#Tupple objects doesn't support item assignment
+#in functions, many times you will see the tupples as it's similar to const.
+
+['__add__',
+ '__class__',
+ '__contains__',
+ '__delattr__',
+ '__delitem__',
+ '__dir__',
+ '__doc__',
+ '__eq__',
+ '__format__',
+ '__ge__',
+ '__getattribute__',
+ '__getitem__',
+ '__gt__',
+ '__hash__',
+ '__iadd__',
+ '__imul__',
+ '__init__',
+ '__init_subclass__',
+ '__iter__',
+ '__le__',
+ '__len__',
+ '__lt__',
+ '__mul__',
+ '__ne__',
+ '__new__',
+ '__reduce__',
+ '__reduce_ex__',
+ '__repr__',
+ '__reversed__',
+ '__rmul__',
+ '__setattr__',
+ '__setitem__',
+ '__sizeof__',
+ '__str__',
+ '__subclasshook__',
+ 'append',
+ 'clear',
+ 'copy',
+ 'count',
+ 'extend',
+ 'index',
+ 'insert',
+ 'pop',
+ 'remove',
+ 'reverse',
+ 'sort']
+######################################################################
+ 
+
+######################################################################
+# Dictionary: It's a key value pair.
+# There is a problem in Tupple and list, whenever we want to access any
+# variable, we need to use the index to access those variable. That is
+# not the case with DICTIONARY. USE CURLY BRACES
+# Note: To perform this, i was using Jupiter from e-learning class.
+# Author: Amber Bhardwaj
+######################################################################
+
+details = {'name':'Amber', 'age':34, 'country':'India'}
+details['age'] #give you the value
+details.values() #Whenever you need to print the full details.
+
+#We can have nested dictionary
+details['address']={'Line1':'25A', 'Line2':'25B'}
+details
+
+#This is just to introduce a new lib
+import pandas as pd
+df = pd.DataFrame(details)
+df
+
+#you can export it into a csv file and many other format
+#df.to_csv('Details.csv', index=False)
+#If you want to popup a key and its value then use 
+#details.pop('address')
+details
+
+#you can't sort the dictionary directy so for this there operator or use Pandas
+df.sort_values('age')
+
+#name	age	country	address
+#Line1	Amber	34	India	25A
+#Line2	Amber	34	India	25B
