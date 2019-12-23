@@ -130,3 +130,17 @@ df.sort_values('age')
 #name	age	country	address
 #Line1	Amber	34	India	25A
 #Line2	Amber	34	India	25B
+
+
+#set : Collection of unique values. It contains only unique values
+
+s1 = {1,2,3,4,'a','f','c','a','d','b','c',5,1,2,3,2,5,6,8} # used curly bracket and doesn't use values. you can use anything inside set e.g. char or string
+s2 = {'a', 'b', 'c', 'd'}
+
+s1.intersection(s2) #only shows the common values
+
+s1.union(s2) #display only unique value with combined result
+
+s1.difference(s2) #remove the common content {1, 2, 3, 4, 5, 6, 8, 'f'}
+
+s2.difference(s1) # if nothing is common then this operation returns the empty set.
